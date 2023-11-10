@@ -1,0 +1,153 @@
+<!-- headr-file-start -->
+
+<style>
+    .notification-form {
+    padding: 40px;
+    margin: 40px 0px 40px 0px;
+}
+</style>
+@include('header')
+<!-- headr-file-start -->
+   <div class="content-wrapper">
+      <!-- Container-fluid starts -->
+      <!-- Main content starts -->
+      <div class="container-fluid">
+         <div class="row">
+            <div class="main-header">
+               <h4>Feedback</h4>
+            </div>
+         </div>
+         <!-- 4-blocks row start -->
+         <div class="row dashboard-header" style="background: #e5e5e5;">
+             <div class="col-md-11  mx-auto">
+       <!--end form-->
+                 <!--start Table-->
+                  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Suject</th>
+        <th>feedback Message</th>
+         <th>Image</th>
+          <th  class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Lorem Ipsum SImple dummy text</td>
+        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</td>
+        <td><img src="assets/images/avatar-1.png"></td>
+        <td class="text-center"><i class="fa-solid fa-trash text-danger"></i></td>
+      </tr>
+     <tr>
+        <td>2</td>
+        <td>Lorem Ipsum SImple dummy text</td>
+        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</td>
+        <td><img src="assets/images/avatar-1.png"></td>
+        <td class="text-center"><i class="fa-solid fa-trash text-danger"></i></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Lorem Ipsum SImple dummy text</td>
+        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</td>
+        <td><img src="assets/images/avatar-1.png"></td>
+        <td class="text-center"><i class="fa-solid fa-trash text-danger"></i></td>
+      </tr>
+    </tbody>
+  </table>
+                 <!--end table-->
+             </div>
+          
+            
+         </div>
+          <!-- 4-blocks row end -->
+
+
+
+       
+
+        
+
+      </div>
+      <!-- Main content ends -->
+      <!-- Container-fluid ends -->
+
+   </div>
+   </div>
+<style>
+    /* CSS to style the toolbar and menu */
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu button {
+    border: none;
+    cursor: pointer;
+    transform: rotate(90deg);
+    background: none !important;
+    color: #063b6a !important;
+    font-size: 22px;
+}
+.menu-options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+ul.menu-options li {
+    padding: 5px 10px;
+    background: #063b6a;
+    z-index: 1;
+    color: white;
+}
+.menu:hover .menu-options {
+    display: block;
+}
+
+</style>
+
+<script>
+    import React, { useState } from 'react';
+
+const Toolbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    return (
+        <div className="toolbar">
+            {/* Toolbar items */}
+            <button>Item 1</button>
+            <button>Item 2</button>
+            {/* Three dots menu */}
+            <div className="menu">
+                <button onClick={toggleMenu}>...</button>
+                {/* Menu options */}
+                {isMenuOpen && (
+                    <ul className="menu-options">
+                        <li>Option 1</li>
+                        <li>Option 2</li>
+                        <li>Option 3</li>
+                    </ul>
+                )}
+            </div>
+        </div>
+    );
+};
+
+export default Toolbar;
+
+</script>
+
+<!-- footer-file-start -->
+
+@include('footer')
+<!-- footer-file-start -->
